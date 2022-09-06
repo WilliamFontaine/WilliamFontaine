@@ -1,5 +1,5 @@
 # 👨‍🎓 About me
-Hi, i'm William Fontaine, I'm a junior frontend developer. I love learning new programming languages and expanding m knowledge, I'm rather curious 😋.
+Hi, i'm William Fontaine, I'm a junior frontend developer. I love learning new programming languages and expanding my knowledge, I'm rather curious 😋.
 
 
 # 💻 Tech Stack:
