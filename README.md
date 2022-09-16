@@ -1,8 +1,8 @@
-# 👨‍🎓 About me
+# 👨‍🎓 About me :
 Hi, i'm William Fontaine, I'm a junior frontend developer. I love learning new programming languages and expanding my knowledge, I'm rather curious 😋.
 
 
-# 💻 Tech Stack:
+# 💻 Tech Stack :
 
 ##### Programming languages
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
@@ -40,13 +40,13 @@ Hi, i'm William Fontaine, I'm a junior frontend developer. I love learning new p
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 
-# 📊 GitHub Stats:
+# 📊 GitHub Stats :
 ![](https://github-readme-stats.vercel.app/api?username=WilliamFontaine&theme=tokyonight&hide_border=false&include_all_commits=false&count_private=false)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=WilliamFontaine&theme=tokyonight&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=WilliamFontaine&theme=tokyonight&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
-# 🌐 Social
+# 🌐 Social :
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/williamftn) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/willidevit) 
 
-# ✍️ Random Dev Quote
+# ✍️ Random Dev Quote :
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
