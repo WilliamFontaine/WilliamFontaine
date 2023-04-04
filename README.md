@@ -3,8 +3,6 @@ Hi, i'm William Fontaine, I'm a junior full-stack developer. I love learning new
 
 # 🌐 Social :
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/williamftn)
-[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/willidevit) 
-
 
 # 💻 Tech Stack :
 
