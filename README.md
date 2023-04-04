@@ -1,6 +1,10 @@
 # 👨‍🎓 About me :
 Hi, i'm William Fontaine, I'm a junior full-stack developer. I love learning new programming languages and expanding my knowledge, I'm rather curious 😋.
 
+# 🌐 Social :
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/williamftn)
+[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/willidevit) 
+
 
 # 💻 Tech Stack :
 
@@ -46,10 +50,6 @@ Hi, i'm William Fontaine, I'm a junior full-stack developer. I love learning new
 # 📊 GitHub Stats :
 ![github stats](https://github-readme-streak-stats.herokuapp.com/?user=WilliamFontaine&theme=tokyonight&hide_border=false)
 
-
-# 🌐 Social :
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/williamftn)
-[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/willidevit) 
 
 # ✍️ Random Dev Quote :
 ![random quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
