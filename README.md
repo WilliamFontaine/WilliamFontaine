@@ -20,7 +20,7 @@ stack:
   backend: [NestJS, Node.js, Prisma, PostgreSQL]
   devops: [Docker, CI/CD, Git]
 
-currently_building: Combox — SaaS for social media scheduling
+currently_building: ComWave — SaaS for social media scheduling
 ```
 
 <p align="center">
@@ -49,12 +49,12 @@ currently_building: Combox — SaaS for social media scheduling
 ### What I'm Building
 
 <div align="center">
-  <h3>Combox</h3>
+  <h3>ComWave</h3>
   <p>
     <a href="https://comwave.app">
-      <img src="https://img.shields.io/badge/Live-com--box.app-667eea?style=for-the-badge" alt="Combox"/>
+      <img src="https://img.shields.io/badge/Live-comwave.app-667eea?style=for-the-badge" alt="ComWave"/>
     </a>
-    <a href="https://github.com/combox">
+    <a href="https://github.com/com-wave">
       <img src="https://img.shields.io/badge/GitHub-Org-181717?style=for-the-badge&logo=github" alt="GitHub"/>
     </a>
   </p>
