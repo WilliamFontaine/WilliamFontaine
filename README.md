@@ -51,7 +51,7 @@ currently_building: Combox — SaaS for social media scheduling
 <div align="center">
   <h3>Combox</h3>
   <p>
-    <a href="https://com-box.app">
+    <a href="https://comwave.app">
       <img src="https://img.shields.io/badge/Live-com--box.app-667eea?style=for-the-badge" alt="Combox"/>
     </a>
     <a href="https://github.com/combox">
