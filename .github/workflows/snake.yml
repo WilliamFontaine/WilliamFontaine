@@ -43,12 +43,14 @@ jobs:
       - name: Generate snake
         working-directory: snk
         env:
-          # Inutilise par le lecteur HTML, mais le CLI l'exige.
-          GITHUB_TOKEN: ${{ github.token }}
+          # Le CLI exige la variable, le lecteur HTML ne s'en sert pas.
+          # On ne donne donc pas de vrai token a ce code tiers.
+          GITHUB_TOKEN: unused-by-the-html-source
+          OWNER: ${{ github.repository_owner }}
         run: |
           bun install --frozen-lockfile
           bun run packages/generate-snake-animation/cli.ts \
-            --github_user=${{ github.repository_owner }} \
+            --github_user="$OWNER" \
             --output=../dist/github-snake.svg \
             --output='../dist/github-snake-dark.svg?palette=github-dark'
 
