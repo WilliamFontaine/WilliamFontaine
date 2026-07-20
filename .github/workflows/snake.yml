@@ -26,11 +26,9 @@ jobs:
       - name: Set up bun
         uses: oven-sh/setup-bun@v2
 
-      # GitHub a durci les limites de son API GraphQL le 2026-07-17 :
-      # contributionCalendar repond RESOURCE_LIMITS_EXCEEDED pour ce compte,
-      # dont 92% des contributions sont privees. On lit la page publique des
-      # contributions a la place. snk embarque deja ce lecteur mais ne le
-      # branche pas, donc on le substitue au point d'entree du package.
+      # L'API GraphQL repond RESOURCE_LIMITS_EXCEEDED pour ce compte depuis le
+      # 2026-07-17. snk sait lire la page publique, sans token, mais ne branche
+      # pas ce lecteur : on le substitue au point d'entree du package.
       - name: Read contributions from the public page
         run: |
           cat > snk/packages/github-user-contribution/index.ts <<'EOF'
@@ -43,9 +41,7 @@ jobs:
       - name: Generate snake
         working-directory: snk
         env:
-          # Le CLI exige la variable, le lecteur HTML ne s'en sert pas.
-          # On ne donne donc pas de vrai token a ce code tiers.
-          GITHUB_TOKEN: unused-by-the-html-source
+          GITHUB_TOKEN: unused-by-the-html-source # exige par le CLI
           OWNER: ${{ github.repository_owner }}
         run: |
           bun install --frozen-lockfile
