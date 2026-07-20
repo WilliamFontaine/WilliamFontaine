@@ -8,24 +8,56 @@ on:
     branches:
       - main
 
+env:
+  SNAKE_OUTPUTS: |
+    dist/github-snake.svg
+    dist/github-snake-dark.svg?palette=github-dark
+
 jobs:
   generate:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
 
     steps:
-      - name: Generate Snake
+      # L'API GraphQL de GitHub renvoie par intermittence
+      # RESOURCE_LIMITS_EXCEEDED sur contributionCalendar. L'action ne retente
+      # pas, donc un seul appel perdant fait echouer le job : on retente ici.
+      - name: Generate snake (attempt 1)
+        id: attempt1
+        continue-on-error: true
         uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: WilliamFontaine
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
+          github_user_name: ${{ github.repository_owner }}
+          outputs: ${{ env.SNAKE_OUTPUTS }}
+
+      - name: Back off before attempt 2
+        if: steps.attempt1.outcome == 'failure'
+        run: sleep 120
+
+      - name: Generate snake (attempt 2)
+        id: attempt2
+        if: steps.attempt1.outcome == 'failure'
+        continue-on-error: true
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: ${{ env.SNAKE_OUTPUTS }}
+
+      - name: Back off before attempt 3
+        if: steps.attempt2.outcome == 'failure'
+        run: sleep 120
+
+      - name: Generate snake (attempt 3)
+        if: steps.attempt2.outcome == 'failure'
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: ${{ env.SNAKE_OUTPUTS }}
 
       - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
           build_dir: dist
