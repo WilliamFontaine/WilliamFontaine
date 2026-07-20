@@ -8,53 +8,49 @@ on:
     branches:
       - main
 
-env:
-  SNAKE_OUTPUTS: |
-    dist/github-snake.svg
-    dist/github-snake-dark.svg?palette=github-dark
-
 jobs:
   generate:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
 
     steps:
-      # L'API GraphQL de GitHub renvoie par intermittence
-      # RESOURCE_LIMITS_EXCEEDED sur contributionCalendar. L'action ne retente
-      # pas, donc un seul appel perdant fait echouer le job : on retente ici.
-      - name: Generate snake (attempt 1)
-        id: attempt1
-        continue-on-error: true
-        uses: Platane/snk/svg-only@v3
+      - name: Checkout snk
+        uses: actions/checkout@v7
         with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: ${{ env.SNAKE_OUTPUTS }}
+          repository: Platane/snk
+          ref: v3.5.0
+          path: snk
 
-      - name: Back off before attempt 2
-        if: steps.attempt1.outcome == 'failure'
-        run: sleep 120
+      - name: Set up bun
+        uses: oven-sh/setup-bun@v2
 
-      - name: Generate snake (attempt 2)
-        id: attempt2
-        if: steps.attempt1.outcome == 'failure'
-        continue-on-error: true
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: ${{ env.SNAKE_OUTPUTS }}
+      # GitHub a durci les limites de son API GraphQL le 2026-07-17 :
+      # contributionCalendar repond RESOURCE_LIMITS_EXCEEDED pour ce compte,
+      # dont 92% des contributions sont privees. On lit la page publique des
+      # contributions a la place. snk embarque deja ce lecteur mais ne le
+      # branche pas, donc on le substitue au point d'entree du package.
+      - name: Read contributions from the public page
+        run: |
+          cat > snk/packages/github-user-contribution/index.ts <<'EOF'
+          export { fetchGithubUserContributionHtml as getGithubUserContribution } from "./fetchContributionHtml";
+          import type { fetchGithubUserContributionHtml } from "./fetchContributionHtml";
+          export type Res = Awaited<ReturnType<typeof fetchGithubUserContributionHtml>>;
+          export type Cell = Res[number];
+          EOF
 
-      - name: Back off before attempt 3
-        if: steps.attempt2.outcome == 'failure'
-        run: sleep 120
-
-      - name: Generate snake (attempt 3)
-        if: steps.attempt2.outcome == 'failure'
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: ${{ env.SNAKE_OUTPUTS }}
+      - name: Generate snake
+        working-directory: snk
+        env:
+          # Inutilise par le lecteur HTML, mais le CLI l'exige.
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          bun install --frozen-lockfile
+          bun run packages/generate-snake-animation/cli.ts \
+            --github_user=${{ github.repository_owner }} \
+            --output=../dist/github-snake.svg \
+            --output='../dist/github-snake-dark.svg?palette=github-dark'
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v5
