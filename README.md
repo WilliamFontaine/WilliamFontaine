@@ -9,24 +9,27 @@
 ```yaml
 name: William Fontaine
 location: Clermont-Ferrand, France
-role: Full-Stack Developer
+role: Freelance full-stack developer (web and mobile)
 
 focus:
-  - Building tools that create real value
-  - Helping people save time and do things they couldn't before
+  - Taking products from the first conversation to production, and staying on after launch
+  - Building tools that people actually use every day
 
 stack:
-  frontend: [Vue.js, Nuxt, TypeScript, TailwindCSS, Pinia]
-  backend: [NestJS, Node.js, Prisma, PostgreSQL]
-  devops: [Docker, CI/CD, Git]
+  java: [Java, Spring Boot, Angular, NgRx]
+  typescript: [React, Next.js, Vue.js, Nuxt, Node.js, NestJS]
+  mobile: [Capacitor]
+  data: [PostgreSQL, Prisma, Redis]
+  devops: [Docker, CI/CD, Ansible, Git]
 
-currently_building: ComWave — SaaS for social media scheduling
+currently_working_on:
+  - Forestry management software for TerrAgree, in production since July 2026
+  - NEOGO, a door-to-door journey comparison startup
 ```
 
 <p align="center">
-  <a href="https://linkedin.com/in/williamftn"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://www.malt.fr/profile/willidev-it"><img src="https://img.shields.io/badge/Malt-FC5757?style=for-the-badge&logo=malt&logoColor=white" alt="Malt"/></a>
-  <a href="https://wfontaine.fr"><img src="https://img.shields.io/badge/Portfolio-667eea?style=for-the-badge&logo=Safari&logoColor=white" alt="Portfolio"/></a>
+  <a href="https://www.linkedin.com/in/william-fontaine"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://www.malt.fr/profile/williamfontaine"><img src="https://img.shields.io/badge/Malt-FC5757?style=for-the-badge&logo=malt&logoColor=white" alt="Malt"/></a>
   <a href="mailto:william.fontaine0308@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
 
@@ -36,33 +39,21 @@ currently_building: ComWave — SaaS for social media scheduling
 
 <p align="center">
   <strong>Main Focus</strong><br/><br/>
-  <img src="https://skillicons.dev/icons?i=vue,nuxt,ts,tailwind,nestjs,nodejs,postgres,prisma,docker,git&theme=dark" alt="Main Stack" />
+  <img src="https://skillicons.dev/icons?i=java,spring,angular,ts,react,nextjs,vue,nuxt,postgres,docker&theme=dark" alt="Main Stack" />
 </p>
 
 <p align="center">
   <strong>Also Experienced With</strong><br/><br/>
-  <img src="https://skillicons.dev/icons?i=java,spring,angular,react,python,fastapi,django&theme=dark" alt="Other Skills" />
+  <img src="https://skillicons.dev/icons?i=nodejs,nestjs,prisma,redis,tailwind,ansible,git&theme=dark" alt="Other Skills" />
 </p>
 
 ---
 
-### What I'm Building
+### What I'm Working On
 
-<div align="center">
-  <h3>ComWave</h3>
-  <p>
-    <a href="https://comwave.app">
-      <img src="https://img.shields.io/badge/Live-comwave.app-667eea?style=for-the-badge" alt="ComWave"/>
-    </a>
-    <a href="https://github.com/com-wave">
-      <img src="https://img.shields.io/badge/GitHub-Org-181717?style=for-the-badge&logo=github" alt="GitHub"/>
-    </a>
-  </p>
-  <p>
-    SaaS for scheduling & auto-publishing content across social platforms.<br/>
-    <sub>Multi-tenant · OAuth 2.0 · BullMQ · PostgreSQL · Redis</sub>
-  </p>
-</div>
+**TerrAgree**: since January 2026, I've been building their forestry management software from scratch, to replace their previous tool. It tracks forests and sales all the way to signed contracts, with a dedicated space for owners. In production since July 2026, and I still look after it.
+
+**[NEOGO](https://app.neogoapp.com)**: a Clermont-Ferrand startup that compares door-to-door journeys by train, coach, carpool, plane or car. I started on their mobile app, then joined the web comparison tool. I'm now part of the small team.
 
 ---
 
@@ -70,14 +61,15 @@ currently_building: ComWave — SaaS for social media scheduling
 
 | Project | What it did | Stack |
 |---------|-------------|-------|
-| [**Quoi Regarder**](https://github.com/quoi-regarder) | Helped 2,700+ users discover movies & series | Nuxt · NestJS · PostgreSQL |
-| [**Egenr**](https://github.com/EgenR) | Desktop app for podiatrists — patient management & PDF reports | Nuxt · Electron · NestJS |
+| [**Quoi Regarder**](https://github.com/quoi-regarder) | Helped 2,700+ users pick movies and series. Co-founded with Marin | Spring Boot · Nuxt · PostgreSQL |
+| [**Egenr**](https://github.com/EgenR) | Desktop app for podiatrists, with patient records and PDF reports. Still used daily at a practice | Tauri · Spring Boot · Nuxt |
+| [**ComWave**](https://github.com/com-wave) | SaaS to schedule and auto-publish posts across social platforms. Archived in April 2026 | Nuxt · NestJS · PostgreSQL · Redis |
 
 ---
 
 ### Background
 
-> 3 years building a **complex ERP for the luxury industry** — precious metals & gemstone traceability, multi-currency billing, regulatory compliance.
+> 3 years as an apprentice developer at NEO-FUGU, on an **ERP for the luxury industry** (precious metals and gemstone traceability, multi-currency billing, regulatory compliance).
 >
 > *Taught me that maintainable code isn't optional when the stakes are high.*
 
@@ -89,7 +81,7 @@ currently_building: ComWave — SaaS for social media scheduling
 Code should create value, not just exist.
 ```
 
-What drives me is the impact — helping people save time, do things they couldn't before, solve real problems. I'm not interested in building things just because they're technically impressive. If it doesn't serve someone, it's just noise.
+What drives me is the impact. Helping people save time, do things they couldn't before, solve real problems. I'm not interested in building things just because they're technically impressive. If it doesn't serve someone, it's just noise.
 
 Every feature I ship, every line I write, I ask: *does this actually help?*
 
